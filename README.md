@@ -5,5 +5,5 @@
 + ***Endpoints Used***
   + [__Weatherdbi__](https://weatherdbi.herokuapp.com/data/weather/argentina)
   + [__Rest Countries - Region__](https://restcountries.com/v3.1/region/ame)
-  + [__Rest Countries - Subregion__](https://restcountries.com/v3.1/subregion/South%20America))
+  + [__Rest Countries - Subregion__](https://restcountries.com/v3.1/subregion/South%20America)
 
