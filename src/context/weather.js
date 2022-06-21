@@ -1,25 +1,25 @@
 import {createContext,useState,useEffect,useContext} from 'react'
 import useAxios from '../hooks/useAxios';
-import {Country} from '../context/country';
+import {countryContext} from './country';
 const Weather = ({ children }) =>{
-    const [data, setData] = useState([]);
-    const [country] = useContext(Country);
+    const [data, setData] = useState(null);
+    const {country} = useContext(countryContext);
     const api = 'https://weatherdbi.herokuapp.com/data';
     const url = `/weather/${country}`;
     const method = 'get';
     const body = null;
-    const headers = null;
-    const {response,loading,error} = useAxios({api,url,method,body,headers})
+    const headers = null; 
+    const {response,loading} = useAxios({api,url,method,body,headers})
 
 
     useEffect(() => {
         if (response !== null) {
             setData(response);
         }
-    }, [response]);
+    }, [response]); 
 
     return (            
-            <weatherContext.Provider value={[data,setData]}>
+            <weatherContext.Provider value={{data,setData,loading}}>
                 {children}
             </weatherContext.Provider>  
     );

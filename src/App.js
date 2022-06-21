@@ -1,16 +1,16 @@
-import {Country} from "./context/country";
-import {Weather} from "./context/weather";
-import countrySelector from "./components/countrySelector";
-
+import Country from "./context/country";
+import Weather from "./context/weather";
+import Selector from "./components/selector";
+import Data from "./components/data";
+import "./style/app.css";
 function App() {
   return (
-  <>
     <Country>
       <Weather>
-        <countrySelector />
+        <Selector />
+        <Data />
       </Weather>
     </Country>
-  </>
   );
 }
 
