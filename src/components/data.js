@@ -2,7 +2,10 @@ import {useContext} from 'react';
 import {weatherContext} from '../context/weather';
 const Data = () => {
     const context = useContext(weatherContext);
-    const {data} = context;
+    const {data,loading} = context;
+    if (loading) {
+        return <h1>Loading...</h1>
+    }
     return (
         <div>
             { data && data.currentConditions && <img src={data.currentConditions.iconURL} alt={data.currentConditions.comment} />}
