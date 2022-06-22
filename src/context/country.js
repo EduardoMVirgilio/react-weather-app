@@ -1,6 +1,6 @@
 import {createContext,useState} from 'react'
 const Country = ({ children }) =>{
-    const [country,setCountry] = useState('argentina');
+    const [country,setCountry] = useState(null);
     return (            
             <countryContext.Provider value={{country,setCountry}}>
                 {children}

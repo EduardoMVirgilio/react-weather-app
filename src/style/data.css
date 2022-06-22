@@ -1,0 +1,31 @@
+.weather {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding: .25rem;
+    border-radius: .25rem;
+    background-color: rgb(16, 16, 16);
+    box-shadow: .25rem .25rem .25rem rgba(200,200,200,1),
+     -.25rem -.25rem .25rem rgba(252,252,252,1);
+}
+
+.weather__region{
+    flex-basis: 100%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgb(248,248,248);
+    border-bottom: 1px solid rgb(160,160,160);
+    margin-bottom: .25rem;
+}
+.weather__figure{
+    flex-basis: 3rem;
+    width: initial;
+    max-width: none;
+    border-right: 1px solid rgb(160,160,160);
+    margin-right: .25rem;
+}
+.weather__data{
+    flex-grow: 1;
+    font-size: 1rem;
+    color: rgb(248,248,248);
+}
