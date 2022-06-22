@@ -6,8 +6,8 @@ const Data = () => {
     const[data,setData] = useState(null);
     const {country} = useContext(countryContext);
      const {response,loading,error} = useAxios({
-        api:'http://api.weatherapi.com/v1/current.json',
-        url:`?key=84d3eff60ea5407a99a184524222206&q=${country}`,
+        api:'https://api.weatherapi.com/v1/current.json?key=84d3eff60ea5407a99a184524222206',
+        url:`&q=${country}&aqi=no`,
         method:'get',
         body:null,
         headers:null
